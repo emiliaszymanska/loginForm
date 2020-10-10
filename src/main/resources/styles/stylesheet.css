@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    font-family: 'Montserrat', 'Gill Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1.5em 1.5em 0.5em rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    margin-bottom: 7em;
+    width: 19em;
+    height: 21em;
+}
+
+p {
+    margin: 0 0 0.7em;
+    font-size: 2.5em;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1.5em 1.5em rgba(0, 0, 0, 0.3);
+    padding: 0.2em 0.6em;
+    margin: 0.3em 0;
+    border-radius: 0.4em;
+    outline: none;
+    border: none;
+    width: 12em;
+    height: 1.5em;
+    color: black;
+}
+
+input::placeholder {
+    color: rgba(126, 125, 125, 0.5);
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1.5em 1.5em rgba(0, 0, 0, 0.3);
+    padding: 0.4em 1.1em;
+    margin-top: 2em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    color: black;
+    align-self: center;
+}
+
+body, .container, #login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+body, .container {
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    justify-content: flex-start;
+}
