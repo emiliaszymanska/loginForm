@@ -28,7 +28,7 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 1.5em 1.5em 0.5em rgba(0, 0, 0, 0.3);
     border-radius: 1em;
-    margin-bottom: 7em;
+    margin-bottom: 8.5em;
     width: 19em;
     height: 21em;
 }
@@ -40,31 +40,40 @@ p {
 
 input {
     background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 1.5em 1.5em rgba(0, 0, 0, 0.3);
-    padding: 0.2em 0.6em;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+    padding: 0.2em 0.5em;
     margin: 0.3em 0;
     border-radius: 0.4em;
     outline: none;
     border: none;
     width: 12em;
     height: 1.5em;
-    color: black;
+    color: rgb(65, 65, 65);
 }
 
 input::placeholder {
     color: rgba(126, 125, 125, 0.5);
 }
 
-button {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 1.5em 1.5em rgba(0, 0, 0, 0.3);
+label[for=password-input] {
+    margin-top: 0.3em;
+}
+
+#login-button {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0.7em 1em rgba(0, 0, 0, 0.3);
     padding: 0.4em 1.1em;
     margin-top: 2em;
     border-radius: 0.5em;
     border: none;
     cursor: pointer;
-    color: black;
+    color: rgb(65, 65, 65);
     align-self: center;
+}
+
+#login-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(65, 65, 65);
 }
 
 body, .container, #login-form {
