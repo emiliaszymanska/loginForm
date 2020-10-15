@@ -31,7 +31,7 @@ public class LoginHandler implements HttpHandler {
             InputStreamReader isr = new InputStreamReader(exchange.getRequestBody(), "UTF-8");
             BufferedReader br = new BufferedReader(isr);
 
-            Map<String, String> data = Parser.parseData(br.readLine());
+            Map<String, String> data = Parser.parseFormData(br.readLine());
             String email = data.get("email");
             String password = data.get("password");
 
@@ -44,16 +44,16 @@ public class LoginHandler implements HttpHandler {
             exchange.getResponseHeaders().add("Set-Cookie", cookie.toString());
             exchange.getResponseHeaders().add("Access-Control-Allow-Credentials", "true");
 
-            sendResponse(response, exchange, 200);
+            sendResponse(exchange, response, 200);
 
         } catch (Exception e) {
             e.printStackTrace();
             response = e.getMessage();
-            sendResponse(response, exchange, 500);
+            sendResponse(exchange, response, 500);
         }
     }
 
-    private void sendResponse(String response, HttpExchange exchange, int status) throws IOException {
+    private void sendResponse(HttpExchange exchange, String response, int status) throws IOException {
         if (status == 200) {
             exchange.getResponseHeaders().put("Content-type", Collections.singletonList("application/json"));
         }

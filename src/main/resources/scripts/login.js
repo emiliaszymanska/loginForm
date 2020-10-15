@@ -23,7 +23,12 @@ function login(data) {
         })
         .then(function (message) { // user is authenticated (cookie send by server is set in browser)
             console.log(message);
-        }).catch(function (error) { // user NOT authenticated (server returns different status than 200-299)
-        console.log(error);
-    });
+        })
+        .then(function (user) {
+            console.log(user);
+            window.location.href="../html/hello.html"
+        })
+        .catch(function (error) { // user NOT authenticated (server returns different status than 200-299)
+            console.log(error);
+        });
 }

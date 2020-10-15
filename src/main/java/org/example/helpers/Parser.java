@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Parser {
 
-    public static Map<String, String> parseData(String data) throws UnsupportedEncodingException {
+    public static Map<String, String> parseFormData(String data) throws UnsupportedEncodingException {
         Map<String, String> map = new HashMap<>();
         String[] pairs = data.split("&");
 
